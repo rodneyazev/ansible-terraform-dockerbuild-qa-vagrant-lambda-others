@@ -1,0 +1,30 @@
+- hosts: localhost
+  connection: local
+  tasks:
+     - name: update apt repo and cache
+       apt:
+          update_cache: yes
+          force_apt_get: yes
+          cache_valid_time: 3600
+       become: yes
+     - name: upgrade all packages
+       apt:
+          upgrade: dist
+          force_apt_get: yes
+       become: yes
+     - name: install python
+       apt:
+       with_items:
+          - python
+          - python3-pip
+     - name: pip install docker
+       pip:
+          name: docker
+       become: yes
+     - name: deploy nginx docker container
+       docker_container:
+          image: nginx:stable
+          name: nginx
+          state: started
+          ports:
+             - "8080:80"

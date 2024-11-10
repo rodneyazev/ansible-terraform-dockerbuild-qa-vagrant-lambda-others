@@ -1,0 +1,13 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "bento/ubuntu-22.04"
+
+  config.vm.define :test do |test_config|
+    test_config.vm.network :private_network, :ip => "192.168.56.20"
+    test_config.vm.synced_folder '.', '/vagrant', disabled: true
+    test_config.vm.provision "ansible" do |ansible|
+     ansible.playbook="playbook.yml"
+   end
+  end
+
+end

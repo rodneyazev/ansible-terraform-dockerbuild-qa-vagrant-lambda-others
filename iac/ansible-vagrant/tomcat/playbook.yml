@@ -1,0 +1,58 @@
+---
+- name: Install Apache Tomcat 10 using Ansible
+  hosts: test
+  remote_user: vagrant
+  become: yes
+  tasks:
+    - name: Update the System Packages
+      apt:
+        upgrade: yes
+        update_cache: yes
+ 
+    - name: Create a Tomcat User
+      user:
+        name: tomcat
+ 
+    - name: Create a Tomcat Group
+      group:
+        name: tomcat
+ 
+    - name: Install JAVA
+      apt:
+        name: default-jdk
+ 
+    - name: Create a Tomcat Directory
+      file:
+        path: /opt/tomcat
+        owner: tomcat
+        group: tomcat
+        mode: 755
+        recurse: yes
+ 
+    - name: Download & Unarchive Tomcat 10 
+      unarchive:
+        src: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+        dest: /opt/tomcat
+        remote_src: yes
+        extra_opts: [--strip-components=1]
+ 
+    - name: Change ownership of Tomcat directory
+      file:
+        path: /opt/tomcat
+        owner: tomcat
+        group: tomcat
+        mode: "u+rwx,g+rx,o=rx"
+        recurse: yes
+        state: directory
+
+    - name: Copy Tomcat service from local to remote
+      copy:
+        src: ./tomcat.service
+        dest: /etc/systemd/system/
+        mode: 0755
+ 
+    - name: Start and Enable Tomcat 10 on sever
+      systemd:
+        name: tomcat
+        state: started
+        daemon_reload: true

@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "cors.allowed",
+      "type": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cors.allowed.all-headers",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.all-methods",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.methods",
+      "type": "java.util.List<org.springframework.http.HttpMethod>",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.origins",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.p-e-r-m-i-t-a-l-l",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    },
+    {
+      "name": "cors.allowed.send-credentials",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.caelum.clines.shared.configurations.CorsConfigurationProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,13 @@
+- hosts: terraform-ansible
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Install python
+    apt:
+      pkg:
+      - python3
+# Up to date system provides an error message
+#      update_cache: true
+#      upgrade: dist
+#      cache_valid_time: 3600
+#      force_apt_get: true

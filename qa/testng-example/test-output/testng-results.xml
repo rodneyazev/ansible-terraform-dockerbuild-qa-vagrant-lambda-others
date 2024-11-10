@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-17T14:04:58 BRT" name="Default suite" finished-at="2024-10-17T14:04:58 BRT" duration-ms="39">
+    <groups>
+    </groups>
+    <test started-at="2024-10-17T14:04:58 BRT" name="Default test" finished-at="2024-10-17T14:04:58 BRT" duration-ms="39">
+      <class name="com.testng.app.TestngExampleApplicationTests">
+        <test-method signature="login()[pri:0, instance:com.testng.app.TestngExampleApplicationTests@27ff5d15]" started-at="2024-10-17T14:04:58 BRT" name="login" finished-at="2024-10-17T14:04:58 BRT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="setup()[pri:0, instance:com.testng.app.TestngExampleApplicationTests@27ff5d15]" started-at="2024-10-17T14:04:58 BRT" name="setup" finished-at="2024-10-17T14:04:58 BRT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="teardown()[pri:0, instance:com.testng.app.TestngExampleApplicationTests@27ff5d15]" started-at="2024-10-17T14:04:58 BRT" name="teardown" finished-at="2024-10-17T14:04:58 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="testAdd()[pri:0, instance:com.testng.app.TestngExampleApplicationTests@27ff5d15]" started-at="2024-10-17T14:04:58 BRT" name="testAdd" finished-at="2024-10-17T14:04:58 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd -->
+      </class> <!-- com.testng.app.TestngExampleApplicationTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
